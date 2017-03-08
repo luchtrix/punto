@@ -10,7 +10,7 @@ myapp.controller('loginCtrl', ['$scope', '$http', function($scope, $http){
 	}
 	/* Funcion de login */
 	$scope.login = function(){
-		alert("Login II");
+		alert("Login "+url_server);
 		$(".error").empty();
 		/*$http.post(url_server+"home/loginabc", $scope.datalogin).then(function successCallback(response) {
 		    // this callback will be called asynchronously
