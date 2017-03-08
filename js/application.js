@@ -8,7 +8,6 @@ myapp.controller('loginCtrl', ['$scope', '$http', function($scope, $http){
 	if (usuario != null) {
 		window.location.href = 'views/home.html'
 	}
-
 	/* Funcion de login */
 	$scope.login = function(){
 		alert("Login II");
@@ -25,7 +24,7 @@ myapp.controller('loginCtrl', ['$scope', '$http', function($scope, $http){
 		});*/
 		$http.post(url_server+"home/loginabc", $scope.datalogin).then(function(response) {
             if(response.status || response.status == 200){
-            	//alert("response status "+response.status+" data "+response.data+" user "+response.data.user+" id? "+response.data.user._id);
+            	alert("response status "+response.status+" data "+response.data+" user "+response.data.user+" id? "+response.data.user._id);
 				// Alamcenamos la información del usuario
 				localStorage.setItem("usuario", JSON.stringify(response.data.user));
 				window.location.href = 'views/home.html';
